@@ -1,25 +1,6 @@
 <script lang="ts">
 </script>
 
-<header class="header">
-    <div class="wrapper">
-        <div class="header_wrapper">
-            <nav class="header_nav">
-                <ul class="header_list">
-                    <li class="header_item">
-                        <a href="intro.svelte" class="header_link">Home</a>
-                    </li>
-                    <li class="header_item">
-                        <a href="facts.svelte" class="header_link">About</a>
-                    </li>
-                    <li class="header_item">
-                        <a href="contacts.svelte" class="header_link">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
 <!-- Header end -->
 
 <main class="main">
@@ -48,39 +29,6 @@
     max-width: 1060px;
     margin: 0 auto;
     max-height: 100%;
-    }
-    
-    .header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
-    .header_wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        justify-content: space-between;
-    }
-    .header_list{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .header_item{
-        margin-right: 80px;
-    }
-
-    .header_link{
-        font-size: 18px;
-        line-height: 24px;
-        color: white;
-        text-decoration: none;
-    }
-
-    .header_link:hover, .header_link:focus, .header_link:active{
-        opacity: .75;
     }
 
     .intro{
