@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -1334,30 +1334,30 @@ var app = (function () {
     			li3 = element("li");
     			li3.textContent = "My zodiac sign is Aries";
     			attr_dev(h1, "class", "facts_title svelte-1dswblz");
-    			add_location(h1, file$3, 22, 12, 796);
-    			add_location(li0, file$3, 27, 16, 945);
-    			add_location(li1, file$3, 28, 16, 993);
-    			add_location(li2, file$3, 29, 16, 1032);
-    			add_location(p, file$3, 32, 24, 1182);
+    			add_location(h1, file$3, 22, 12, 829);
+    			add_location(li0, file$3, 27, 16, 978);
+    			add_location(li1, file$3, 28, 16, 1026);
+    			add_location(li2, file$3, 29, 16, 1065);
+    			add_location(p, file$3, 32, 24, 1215);
     			attr_dev(div0, "id", "dog_result");
     			attr_dev(div0, "class", "svelte-1dswblz");
-    			add_location(div0, file$3, 31, 20, 1135);
+    			add_location(div0, file$3, 31, 20, 1168);
     			attr_dev(div1, "class", "results svelte-1dswblz");
-    			add_location(div1, file$3, 30, 16, 1092);
-    			add_location(button, file$3, 36, 20, 1348);
+    			add_location(div1, file$3, 30, 16, 1125);
+    			add_location(button, file$3, 36, 20, 1381);
     			attr_dev(div2, "id", "dog_button");
     			attr_dev(div2, "class", "svelte-1dswblz");
-    			add_location(div2, file$3, 35, 16, 1281);
-    			add_location(li3, file$3, 38, 16, 1420);
+    			add_location(div2, file$3, 35, 16, 1314);
+    			add_location(li3, file$3, 38, 16, 1453);
     			attr_dev(ul, "class", "facts_list svelte-1dswblz");
-    			add_location(ul, file$3, 26, 12, 904);
+    			add_location(ul, file$3, 26, 12, 937);
     			attr_dev(div3, "class", "wrapper svelte-1dswblz");
-    			add_location(div3, file$3, 20, 8, 759);
+    			add_location(div3, file$3, 20, 8, 792);
     			attr_dev(section, "class", "facts svelte-1dswblz");
-    			add_location(section, file$3, 19, 4, 713);
+    			add_location(section, file$3, 19, 4, 746);
     			attr_dev(main, "class", "main");
     			attr_dev(main, "download", "");
-    			add_location(main, file$3, 18, 0, 679);
+    			add_location(main, file$3, 18, 0, 712);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1418,7 +1418,7 @@ var app = (function () {
     	if (dogData.url.includes('.mp4')) {
     		getRandomDog();
     	} else {
-    		dog_result.innerHTML = `<img style = "width: 100%" id="dog_pic" src="${dogData.url}"/>`;
+    		dog_result.innerHTML = `<img style = "object-fit: cover; height: 100%; width: 100%" id="dog_pic" src="${dogData.url}"/>`;
     	}
     }
 
