@@ -1,6 +1,32 @@
 <script lang="ts">
-</script>
+    window.onload = async function() { // getting initial dog image
+    await getRandomDog()
+    }
 
+    // const dog_btn: HTMLElement = document.getElementById('dog_button')!
+
+    // dog_btn.addEventListener('click', getRandomDog)
+    // dog_btn.addEventListener('load', getRandomDog)
+
+    async function getRandomDog(): Promise<void> {
+        const response: Response = await fetch('https://random.dog/woof.json')
+        const dogData: RandomDogResponse = await response.json()
+        const dog_result: HTMLElement = document.getElementById('dog_result')!
+
+
+        if (dogData.url.includes('.mp4')) {
+            getRandomDog()
+        } else {
+            dog_result.innerHTML = `<img src="${dogData.url}"/>`
+        }
+
+    }
+
+    interface RandomDogResponse {
+        fileSizeBytes: number
+        url: string
+    }
+</script>
 
 <main class="main">
     <section class="facts">
@@ -19,7 +45,7 @@
                         <p>Random dog Placeholder</p>
                     </div>
                 </div>
-                <div id="dog_button">
+                <div id="dog_button" on:click={getRandomDog()}>
                     <button> Get new dog </button>
                 </div>
                 <li>My zodiac sign is Aries</li>
@@ -69,13 +95,13 @@
     }
 
     #dog_result {
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        height: 200px;
-        width: 150px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 200px;
+    width: 150px;
     }
 
     #dog_result img {
