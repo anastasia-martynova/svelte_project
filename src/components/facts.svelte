@@ -17,7 +17,7 @@
         if (dogData.url.includes('.mp4')) {
             getRandomDog()
         } else {
-            dog_result.innerHTML = `<img src="${dogData.url}"/>`
+            dog_result.innerHTML = `<img style = "width: 100%" id="dog_pic" src="${dogData.url}"/>`
         }
 
     }
@@ -28,8 +28,8 @@
     }
 </script>
 
-<main class="main">
-    <section class="facts">
+<main class="main" download>
+    <section class="facts">             
         <div class="wrapper">
 
             <h1 class="facts_title">
@@ -45,7 +45,7 @@
                         <p>Random dog Placeholder</p>
                     </div>
                 </div>
-                <div id="dog_button" on:click={getRandomDog()}>
+                <div id="dog_button" on:click={getRandomDog}>
                     <button> Get new dog </button>
                 </div>
                 <li>My zodiac sign is Aries</li>
@@ -104,9 +104,7 @@
     width: 150px;
     }
 
-    #dog_result img {
-        object-fit: cover;
-        height: 100%;
+    #dog_pic {
         width: 100%;
     }
 
