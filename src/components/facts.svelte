@@ -16,7 +16,7 @@
         if (dogData.url.includes('.mp4')) {
             getRandomDog()
         } else {
-            dog_result.innerHTML = `<img style = "width: 100%" id="dog_pic" src="${dogData.url}"/>`
+            dog_result.innerHTML = `<img style = "object-fit: cover; height: 100%; width: 100%" id="dog_pic" src="${dogData.url}"/>`
         }
 
     }
