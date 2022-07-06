@@ -1,7 +1,6 @@
 <script lang="ts">
-    window.onload = async function() { // getting initial dog image
-    await getRandomDog()
-    }
+    import {onMount} from 'svelte'
+    onMount(async () => getRandomDog())
 
     // const dog_btn: HTMLElement = document.getElementById('dog_button')!
 
